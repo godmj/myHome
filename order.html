@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>상품 주문서</h1>
+    <form>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>주문자 이름 <input type="text" name="orderNm"></li>
+                <li>전화번호 <input type="text" placeholder="번호만 입력" name="phonNum"></li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>배송 정보</legend>
+            <ul>
+                <li>배송 옵션: 
+                    <input type="radio" name="postOption" checked>기존 배송지
+                    <input type="radio" name="postOption">새 배송지
+                </li>
+                <li>주소
+                    <input type="text" name="address">
+                </li>
+                <li>요청사항
+                    <select name="orderEtc">
+                        <option>요청사항을 선택하세요.</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>주문 정보</legend>
+            <span>상품</span><br>
+            <input type="checkbox" name="product01"> 방울토마토1kg<del>10,000원</del><strong>8,000원</strong>
+            <input type="text" name="seq01">박스 <br>
+            <input type="checkbox" name="product02"> 방울토마토2kg<del>20,000원</del><strong>16,000원</strong>
+            <input type="text" name="seq02">박스<br>
+            <input type="checkbox" name="product03"> 방울토마토3kg<del>30,000원</del><strong>24,000원</strong>
+            <input type="text" name="seq03">박스 <br>
+            기타사항<textarea></textarea> 
+        </fieldset>
+        <fieldset>
+            <legend>결제 수단</legend>
+            <ul>
+                <li><input type="radio" name="payType" checked>계좌 이체</li>
+                <li><input type="radio" name="payType">카드 결제</li>
+                <li><input type="radio" name="payType">일반 결제</li>
+            </ul>
+        </fieldset>        
+    </form>
+    <section>
+        <button>초기화</button>
+        <button>결제하기</button>
+    </section>
+</body>
+</html>
